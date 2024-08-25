@@ -1,0 +1,10 @@
+ Windows Registry Editor Version 5.00
+
+#Dont forget to check the Driver key of your GPU before you apply the registry(0000,0001,0002 e.t.c)
+ [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000\UMD]
+
+"Main3D_DEF"="1"
+
+"Main3D"=hex:31,00
+
+"FlipQueueSize"=hex:31,00 
