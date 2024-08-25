@@ -1,0 +1,3 @@
+Radeon Anti-lag
+Radeon Boost
+Radeon Enhanced Sync
