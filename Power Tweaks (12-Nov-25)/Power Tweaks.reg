@@ -16,7 +16,7 @@ Windows Registry Editor Version 5.00
 "AllowPepPerfStates"=dword:00000000 ;Blocks Platform Energy Provider (PEP) from managing CPU performance states automatically. Basically, disables “smart” energy saving.
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\I/O System]
-"CountOperations"=dword:00000000 ;Disables operation counting in the I/O system — Windows won’t measure how many read/write actions apps do. Reduces logging overhead.
+"CountOperations"=dword:00000000 ;Disables operation counting in the I/O system Windows won’t measure how many read/write actions apps do. Reduces logging overhead.
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\fssProv]
 "EncryptProtocol"=dword:00000000 ;Turns off forced encryption in the File System Shadow Copy Provider (used by backups). Rarely affects daily use.
