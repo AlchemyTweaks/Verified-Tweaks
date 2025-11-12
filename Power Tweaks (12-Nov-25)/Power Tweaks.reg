@@ -1,29 +1,30 @@
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\EnergyEstimation\TaggedEnergy]
-"DisableTaggedEnergyLogging"=dword:00000001
-"TelemetryMaxApplication"=dword:00000000
-"TelemetryMaxTagPerApplication"=dword:00000000
+"DisableTaggedEnergyLogging"=dword:00000001 ;Turns off energy tracking logs that record how much power apps use. Less background logging = slightly less CPU use.
+"TelemetryMaxApplication"=dword:00000000 ;Stops Windows from collecting energy data per app for telemetry (data reporting).
+"TelemetryMaxTagPerApplication"=dword:00000000 ;Stops Windows from tagging and tracking extra details about app energy use.
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Throttle]
-"PerfEnablePackageIdle"=dword:00000000
+"PerfEnablePackageIdle"=dword:00000000 ;Prevents the system from forcing CPU packages into idle states (C-states). Keeps the CPU more responsive but uses a bit more power.
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
-"PlatformAoAcOverride"=dword:00000000
+"PlatformAoAcOverride"=dword:00000000 ;Disables Modern Standby (AoAc) so your PC uses classic sleep mode instead of the mobile-style background mode that can cause instability.
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Processor]
-"CPPCEnable"=dword:00000000
-"AllowPepPerfStates"=dword:00000000
+"CPPCEnable"=dword:00000000 ;Turns off Collaborative Processor Performance Control, meaning Windows won’t “negotiate”
+"AllowPepPerfStates"=dword:00000000 ;Blocks Platform Energy Provider (PEP) from managing CPU performance states automatically. Basically, disables “smart” energy saving.
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\I/O System]
-"CountOperations"=dword:00000000
+"CountOperations"=dword:00000000 ;Disables operation counting in the I/O system — Windows won’t measure how many read/write actions apps do. Reduces logging overhead.
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\fssProv]
-"EncryptProtocol"=dword:00000000
+"EncryptProtocol"=dword:00000000 ;Turns off forced encryption in the File System Shadow Copy Provider (used by backups). Rarely affects daily use.
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\pci\Parameters]
-"ASPMOptOut"=dword:00000001
+"ASPMOptOut"=dword:00000001 ;Tells Windows to ignore PCIe power-saving features (ASPM). Keeps PCIe devices (like GPUs, SSDs) always ready and avoids latency spikes.
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule]
-"DisableRpcOver"=dword:00000001
+"DisableRpcOver"=dword:00000001 ;Disables RPC over Scheduler, stopping certain scheduled background communications or telemetry tasks. Reduces remote calls made by Windows.
+
 
