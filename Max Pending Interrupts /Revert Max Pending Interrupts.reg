@@ -53,10 +53,6 @@ Windows Registry Editor Version 5.00
 "GPU_PENDING_INTERRUPTS"=-                   
 "GPU_MAX_PENDING_COMPUTE"=-                   
 "GPU_MAX_PENDING_RENDER"=-                    
-"AUDIO_DEVICE_PENDING_INTERRUPTS"=-         
-"AUDIO_DEVICE_BUFFER_SIZE"=-                
-"AUDIO_MAX_PENDING_INTERRUPTS"=-
-"AUDIO_DEVICE_MAX_PENDING_INTERRUPTS"=-
 "DEVICE_PENDING_INTERRUPTS"=-                
 "DEVICE_MAX_PENDING_IO"=-                    
 "DEVICE_COMPLETION_POLICY"=-                  
