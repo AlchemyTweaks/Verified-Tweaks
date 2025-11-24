@@ -74,12 +74,6 @@ Windows Registry Editor Version 5.00
 "GPU_MAX_PENDING_COMPUTE"="0"                   ; Ensures compute operations are processed without delay.
 "GPU_MAX_PENDING_RENDER"="0"                    ; Forces immediate rendering tasks processing.
 
-; Audio Device Performance Tuning
-"AUDIO_DEVICE_PENDING_INTERRUPTS"="0"           ; Ensures no pending interrupts for sound cards.
-"AUDIO_DEVICE_BUFFER_SIZE"="512"                ; Keeps audio buffer size low to reduce latency in sound processing.
-"AUDIO_MAX_PENDING_INTERRUPTS"="0"
-"AUDIO_DEVICE_MAX_PENDING_INTERRUPTS"="0" 
-
 ; General Device Tuning
 "DEVICE_PENDING_INTERRUPTS"="0"                 ; Generic setting to ensure no pending interrupts for all devices.
 "DEVICE_MAX_PENDING_IO"="0"                     ; Ensures immediate I/O operations across all devices.
